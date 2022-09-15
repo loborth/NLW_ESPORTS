@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header{
+    text-align: center;
+    margin-top: 32px;
+}
+
+header div{
+    width: 120px;
+    margin: auto;
+
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.2%, #e2d45c 100%);
+
+    border-radius: 73px;
+    display: flex;
+
+    transition: transform 200ms;
+    animation: topdown 900ms backwards;
+
+}
+
+header div:hover{
+    transform: scale(1.05);
+}
+
+header div img{
+    width: 120px;
+    border-radius: 50%;
+
+    margin: 4px 3px 2px 1px;
+
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    
+    display: grid;
+    gap: 24px;
+    margin: 32px auto 90px;
+}
+
+section{
+    color: white;
+    
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.2%, #e2d45c 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+    animation: downtop 500ms backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: 400ms;
+}
+
+main section:nth-child(3){
+    animation-delay: 800ms;
+}
+
+section div{
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p{
+    color: #a1a1aa;
+    letter-spacing: -0.18px;
+}
+
+section ul{
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+section ul li {
+    transition: transform 200ms;
+}
+
+section ul li:hover{
+    transform: scale(1.05);
+}
+
+ul{
+    list-style: none;
+}
+
+.games-list img{
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #443254;
+}
+
+/*ANIMATION*/
+
+@keyframes topdown{
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
