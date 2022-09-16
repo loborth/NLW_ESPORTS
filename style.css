@@ -114,7 +114,7 @@ header div {
 }
 
 main section {
-    animation: fromBottom .7s backwards;
+    animation: fromLeft .7s backwards;
 }
 
 main section:nth-child(1) {
@@ -141,14 +141,14 @@ main section:nth-child(3) {
     }
 }
 
-@keyframes fromBottom {
-    from {
+@keyframes fromLeft{
+    0%{
         opacity: 0;
-        transform: translateY(30px)
+        transform: translateX(-30px);
     }
 
-    to {
+    100%{
         opacity: 1;
-        transform: translateY(0)
+        transform: translateX(0);
     }
 }
